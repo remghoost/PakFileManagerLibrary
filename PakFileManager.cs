@@ -15,10 +15,10 @@ namespace PakFileManagerLibrary
         private readonly string _aesKey;
         private readonly EGame _gameVersion;
 
-        public PakFileManager(string aesKey, EGame gameVersion)
+        public PakFileManager(string aesKey)
         {
             _aesKey = aesKey;
-            _gameVersion = gameVersion;
+            _gameVersion = EGame.GAME_UE5_1; // Automatically assign the game version to GAME_UE5_1
             Log.Logger = new LoggerConfiguration().WriteTo.Console(theme: AnsiConsoleTheme.Literate).CreateLogger();
         }
 
